@@ -239,6 +239,10 @@ html[data-theme="dark"] .footer-bottom {
 }
 
 @media (max-width: 991px) {
+  .header-actions {
+    margin-left: auto;
+  }
+
   .header-inner {
     gap: 18px;
   }
@@ -276,7 +280,7 @@ html[data-theme="dark"] .footer-bottom {
 
   .menu-toggle {
     display: grid;
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .footer-main {
