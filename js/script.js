@@ -7,12 +7,143 @@
     window.location.pathname.split("/").pop() || "home.html"
   ).toLowerCase();
 
+  const seo = {
+    "home.html": {
+      title: "Mediqora | Modern Clinic Management Software",
+      description:
+        "Mediqora is secure clinic management software for appointments, patients, prescriptions, billing, medicines, tests and reports.",
+    },
+    "aboutus.html": {
+      title: "About Mediqora | Clinic Management Software",
+      description:
+        "Learn how Mediqora helps clinics and healthcare professionals simplify operations and improve patient care.",
+    },
+    "feature-solutions.html": {
+      title: "Features and Solutions | Mediqora",
+      description:
+        "Explore Mediqora features for clinic appointments, patients, doctors, prescriptions, inventory, tests, reports and billing.",
+    },
+    "pricing.html": {
+      title: "Pricing | Mediqora Clinic Management Software",
+      description:
+        "Compare Mediqora clinic management plans and choose the right tools for your healthcare practice.",
+    },
+    "producttour.html": {
+      title: "Product Tour | Mediqora",
+      description:
+        "Take a product tour of Mediqora, the all-in-one platform for managing modern clinics and doctors.",
+    },
+    "contactus.html": {
+      title: "Contact Mediqora | Clinic Management Support",
+      description:
+        "Contact the Mediqora team for clinic management software information, support and product questions.",
+    },
+    "bookdemo.html": {
+      title: "Book a Demo | Mediqora Clinic Software",
+      description:
+        "Book a Mediqora demo and see how modern clinic management software can simplify your daily operations.",
+    },
+    "blogs.html": {
+      title: "Clinic Management Resources and Blog | Mediqora",
+      description:
+        "Read Mediqora resources and insights about clinic operations, healthcare technology and practice management.",
+    },
+    "documentation.html": {
+      title: "Documentation | Mediqora",
+      description:
+        "Find Mediqora documentation and setup guidance for clinic management workflows and features.",
+    },
+    "faq.html": {
+      title: "Frequently Asked Questions | Mediqora",
+      description:
+        "Find answers to common questions about Mediqora clinic management software, features, security and support.",
+    },
+    "updates.html": {
+      title: "Product Updates | Mediqora",
+      description:
+        "See the latest Mediqora product updates, improvements and new clinic management features.",
+    },
+    "policypage.html": {
+      title: "Privacy Policy and Terms | Mediqora",
+      description:
+        "Read the Mediqora privacy policy, terms and conditions, cookie policy and data protection information.",
+    },
+  }[page] || {};
+
+  const globalStyles = document.createElement("link");
+  globalStyles.rel = "stylesheet";
+  globalStyles.href = "css/header-footer.css";
+  document.head.appendChild(globalStyles);
+
+  const setMeta = (name, content, attribute = "name") => {
+    if (!content) return;
+    let element = document.head.querySelector(`meta[${attribute}="${name}"]`);
+    if (!element) {
+      element = document.createElement("meta");
+      element.setAttribute(attribute, name);
+      document.head.appendChild(element);
+    }
+    element.setAttribute("content", content);
+  };
+
+  if (seo.title) document.title = seo.title;
+  setMeta("description", seo.description);
+  setMeta("og:title", seo.title || document.title, "property");
+  setMeta("og:description", seo.description, "property");
+  setMeta("og:type", "website", "property");
+  setMeta("og:image", "assets/logo.png", "property");
+  setMeta("twitter:card", "summary", "name");
+  setMeta("twitter:title", seo.title || document.title, "name");
+  setMeta("twitter:description", seo.description, "name");
+
+  if (window.location.protocol !== "file:") {
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `${window.location.origin}${window.location.pathname}`;
+  }
+
+  const structuredData = document.createElement("script");
+  structuredData.type = "application/ld+json";
+  structuredData.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: seo.title || document.title,
+    description: seo.description,
+    url: window.location.href,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Mediqora",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Mediqora",
+      logo: {
+        "@type": "ImageObject",
+        url: new URL("assets/logo.png", window.location.href).href,
+      },
+    },
+  });
+  document.head.appendChild(structuredData);
+
   // global favicon
   const favicon = document.createElement("link");
   favicon.rel = "icon";
   favicon.type = "image/x-icon";
   favicon.href = "assets/logo.png";
   document.head.appendChild(favicon);
+
+  // The shared footer uses Font Awesome social icons on every page.
+  if (!document.querySelector('link[href*="font-awesome"]')) {
+    const icons = document.createElement("link");
+    icons.rel = "stylesheet";
+    icons.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
+    document.head.appendChild(icons);
+  }
 
   // ---------- Theme ----------
   const getPreferredTheme = () => {
@@ -43,13 +174,6 @@
 
   // ---------- Dynamic layout ----------
   const isActive = (name) => (page === name ? "active" : "");
-  const productActive = [
-    "feature-solutions.html",
-    "producttour.html",
-    "pricing.html",
-  ].includes(page)
-    ? "active"
-    : "";
   const resourcesActive = [
     "blogs.html",
     "documentation.html",
