@@ -215,7 +215,7 @@
     <div class="footer-brand">
       <div class="brand-logo">
         <img src="assets/logo.png" alt="Mediqora">
-        <h3>Mediqora</h3>
+       
       </div>
       <p>The all-in-one clinic management software for modern clinics and doctors. Built to simplify your work, so you can focus on what matters most — your patients.</p>
       <div class="social-links">

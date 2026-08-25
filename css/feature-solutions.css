@@ -3,12 +3,14 @@
   --navy-2: #263330;
   --teal: #026c68;
   --teal-dark: #0e6362;
+  --blog-teal: #0b9692;
   --teal-soft: #eef8f7;
   --blue: #5fc4e0;
   --blue-soft: #edf7fc;
   --purple: #7180b3;
   --orange: #ef9a49;
-  --ink: #161a18;
+  /* --ink: #161a18; */
+  --ink: #08275f;
   --muted: #667270;
   --line: #e3ecea;
   --panel: #ffffff;
@@ -17,7 +19,7 @@
   --shadow-sm: 0 8px 24px rgba(4, 76, 75, 0.07);
   --radius: 22px;
   --radius-sm: 14px;
-  --max: 1240px;
+  --max: 1600px;
 }
 * {
   box-sizing: border-box;
@@ -89,7 +91,7 @@ button {
   padding: 6px 11px;
   border-radius: 999px;
   background: var(--teal-soft);
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.04em;
@@ -190,7 +192,7 @@ h3 {
   display: inline-grid;
   place-items: center;
   background: var(--teal-soft);
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   font-size: 21px;
   font-weight: 800;
   border: 1px solid rgba(0, 167, 157, 0.12);
@@ -231,7 +233,7 @@ h3 {
 .btn-secondary {
   background: #fff;
   border-color: #b8d9d5;
-  color: var(--teal-dark);
+  color: var(--blog-teal);
 }
 .btn-navy {
   background: linear-gradient(135deg, #0b5571, #0b6a83);
@@ -271,7 +273,7 @@ h3 {
   display: grid;
   place-items: center;
   border: 1px solid var(--teal);
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   font-size: 11px;
   font-weight: 900;
 }
@@ -845,7 +847,7 @@ h3 {
 }
 
 .role-learn-more:hover {
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   background: rgba(255, 255, 255, 0.72);
 }
 
@@ -1287,7 +1289,7 @@ h3 {
   padding: 5px 0;
 }
 .footer-col a:hover {
-  color: var(--teal-dark);
+  color: var(--blog-teal);
 }
 .footer-bottom {
   border-top: 1px solid var(--line);
@@ -1357,7 +1359,7 @@ h3 {
 }
 .dash-logo {
   font-weight: 900;
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   font-size: 13px;
 }
 .dash-grid {
@@ -1556,7 +1558,7 @@ h3 {
   height: 20px;
   border: 1px solid var(--teal);
   border-radius: 50%;
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   font-size: 11px;
 }
 .stats-strip {
@@ -1790,7 +1792,7 @@ h3 {
 }
 .core-grid a {
   font-size: 13px;
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   font-weight: 800;
 }
 .role-solutions {
@@ -2229,11 +2231,11 @@ h4 {
   color: #596663;
 }
 .teal {
-  color: var(--teal-dark);
+  color: var(--blog-teal);
 }
 .eyebrow {
   background: transparent;
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   padding-left: 0;
   padding-right: 0;
   letter-spacing: 0.08em;
@@ -2264,7 +2266,7 @@ h4 {
 .btn-secondary {
   background: rgba(255, 255, 255, 0.92);
   border-color: #b8d9d5;
-  color: var(--teal-dark);
+  color: var(--blog-teal);
 }
 .btn-navy {
   background: linear-gradient(135deg, #0e6362, #075c61);
@@ -2275,7 +2277,7 @@ h4 {
 }
 .icon {
   background: var(--teal-soft);
-  color: var(--teal-dark);
+  color: var(--blog-teal);
   border-color: #d7ece9;
 }
 .icon.blue {
@@ -2323,14 +2325,14 @@ h4 {
   color: var(--muted);
 }
 .footer-col a:hover {
-  color: var(--teal-dark);
+  color: var(--blog-teal);
 }
 .check-list li {
   color: #53625f;
 }
 .check-list li::before {
   border-color: var(--teal);
-  color: var(--teal-dark);
+  color: var(--blog-teal);
 }
 .input,
 .select,
@@ -2389,11 +2391,11 @@ h4 {
   display: none;
 }
 .dash-logo {
-  color: var(--teal-dark);
+  color: var(--blog-teal);
 }
 .dash-side span:first-child {
   background: #eaf7f5;
-  color: var(--teal-dark);
+  color: var(--blog-teal);
 }
 .metric strong {
   color: var(--ink);
@@ -2457,7 +2459,7 @@ h4 {
 .site-footer .social-links a:hover {
   color: #fff;
   background: var(--teal-dark);
-  border-color: var(--teal-dark);
+  border-color: var(--blog-teal);
   transform: translateY(-3px);
 }
 
@@ -2496,9 +2498,21 @@ button {
   max-width: 100%;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .container {
-    width: min(calc(100% - 84px), var(--max));
+    width: calc(100% - 80px);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .container {
+    width: calc(100% - 64px);
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
