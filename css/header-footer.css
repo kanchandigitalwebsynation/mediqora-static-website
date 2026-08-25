@@ -16,6 +16,7 @@ body {
 .header-inner {
   width: calc(100% - 40px);
   max-width: 1360px;
+  min-width: 0;
   height: 72px;
   margin: 0 auto;
   display: flex;
@@ -26,6 +27,7 @@ body {
 .brand {
   display: flex;
   align-items: center;
+  min-width: 0;
   flex: 0 0 auto;
 }
 
@@ -37,6 +39,7 @@ body {
   object-fit: contain;
   object-position: center;
   mix-blend-mode: multiply;
+  max-width: 100%;
 }
 
 .nav {
@@ -44,6 +47,7 @@ body {
   align-items: center;
   gap: 22px;
   margin-left: auto;
+  min-width: 0;
   white-space: nowrap;
 }
 
@@ -644,5 +648,70 @@ html[data-theme="dark"] .footer-bottom {
 
   .footer-brand {
     grid-column: auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1099px) {
+  .nav {
+    position: fixed;
+    left: 18px;
+    right: 18px;
+    top: 82px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-left: 0;
+    padding: 12px 18px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a,
+  .nav button {
+    width: 100%;
+    text-align: left;
+    padding: 13px 0;
+    font-size: 14px;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: grid;
+    margin-left: 0;
+  }
+
+  html[data-theme="dark"] .nav {
+    background: #0b1825;
+    border-color: #203346;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-split {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-split > :not(.hero-copy) {
+    order: -1;
+    width: 100%;
+  }
+
+  .hero-split > .hero-copy {
+    order: 1;
+    width: 100%;
   }
 }

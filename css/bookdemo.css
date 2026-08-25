@@ -5,11 +5,11 @@
   --teal: #026c68;
   --teal-dark: #0e6362;
   --teal-soft: #eef8f7;
-  --blue: #2691ae;
+  --blue: #5fc4e0;
   --blue-soft: #edf7fc;
   --purple: #7180b3;
   --orange: #ef9a49;
-  --ink: #161a18;
+  --ink: #08275f;
   --muted: #667270;
   --line: #e3ecea;
   --panel: #ffffff;
@@ -317,7 +317,7 @@ h3 {
 .cta {
   padding: 34px;
   border-radius: 22px;
-  background: linear-gradient(110deg, #079f99 0%, #087c9d 52%, #07549b 100%);
+  background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   color: white;
   box-shadow: 0 20px 42px rgba(7, 91, 130, 0.18);
   overflow: hidden;
@@ -775,7 +775,7 @@ h3 {
 .phone-actions span {
   flex: 1;
   color: #fff;
-  background: #0b8092;
+  background: var(--teal-dark);
   font-size: 6px;
   text-align: center;
   padding: 5px 2px;
@@ -1063,7 +1063,7 @@ h3 {
 }
 .demo-form-shell aside {
   padding: 34px;
-  background: linear-gradient(135deg, #eefbfa, #f5fbff);
+  background: linear-gradient(135deg, var(--teal-soft), var(--blue-soft));
 }
 .demo-form-shell form {
   padding: 34px;
@@ -1139,7 +1139,7 @@ h3 {
   top: 38px;
   left: 67%;
   width: 70%;
-  border-top: 1px dashed #85cfc9;
+  border-top: 1px dashed var(--teal);
 }
 .demo-steps b {
   position: absolute;
@@ -1567,7 +1567,7 @@ h3, h4 { color: var(--ink); }
 }
 .icon.blue {
   background: var(--blue-soft);
-  color: #2d90ad;
+  color: var(--blue);
 }
 .site-header {
   background: rgba(255,255,255,.92);
@@ -1604,7 +1604,7 @@ h3, h4 { color: var(--ink); }
   box-shadow: 0 0 0 3px rgba(2,108,104,.08);
 }
 .cta {
-  background: linear-gradient(110deg, #056f6a 0%, #087f86 52%, #0b8092 100%);
+  background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   box-shadow: 0 20px 42px rgba(5, 111, 106, .18);
 }
 

@@ -4,13 +4,13 @@
   --navy-2: #263330;
   --teal: #026c68;
   --teal-dark: #0e6362;
-  --blog-teal: #0b9692;
+  --blog-teal: #026c68;
   --teal-soft: #eef8f7;
-  --blue: #2691ae;
+  --blue: #5fc4e0;
   --blue-soft: #edf7fc;
   --purple: #7180b3;
   --orange: #ef9a49;
-  --ink: #161a18;
+  --ink: #08275f;
   --muted: #667270;
   --line: #e3ecea;
   --panel: #ffffff;
@@ -318,7 +318,7 @@ h3 {
 .cta {
   padding: 34px;
   border-radius: 22px;
-  background: linear-gradient(110deg, #079f99 0%, #087c9d 52%, #07549b 100%);
+  background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   color: white;
   box-shadow: 0 20px 42px rgba(7, 91, 130, 0.18);
   overflow: hidden;
@@ -2271,7 +2271,7 @@ h4 {
   box-shadow: 0 0 0 3px rgba(2, 108, 104, 0.08);
 }
 .cta {
-  background: linear-gradient(110deg, #056f6a 0%, #087f86 52%, #0b8092 100%);
+  background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   box-shadow: 0 20px 42px rgba(5, 111, 106, 0.18);
 }
 
@@ -2767,17 +2767,20 @@ button {
 
 @media (max-width: 420px) {
   .stats-strip {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .stats-strip > div {
     min-height: 122px;
     padding: 14px 12px 16px;
-    border-right: 0;
     border-bottom: 1px solid #e8edf2;
   }
 
-  .stats-strip > div:last-child {
+  .stats-strip > div:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .stats-strip > div:nth-last-child(-n + 2) {
     border-bottom: 0;
   }
 
@@ -3034,7 +3037,7 @@ button {
   padding: 20px 30px 0;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(105deg, #089e9f 0%, #087f9f 48%, #0b6daf 100%);
+  background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   box-shadow: 0 14px 34px rgba(7, 102, 147, 0.16);
 }
 

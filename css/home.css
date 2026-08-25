@@ -333,7 +333,7 @@ h3 {
 .cta {
   padding: 34px;
   border-radius: 22px;
-  background: linear-gradient(110deg, #079f99 0%, #087c9d 52%, #07549b 100%);
+  background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   color: white;
   box-shadow: 0 20px 42px rgba(7, 91, 130, 0.18);
   overflow: hidden;
@@ -1872,7 +1872,7 @@ h4 {
   box-shadow: 0 0 0 3px rgba(2, 108, 104, 0.08);
 }
 .cta {
-  background: linear-gradient(110deg, #056f6a 0%, #087f86 52%, #0b8092 100%);
+  background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   box-shadow: 0 20px 42px rgba(5, 111, 106, 0.18);
 }
 
