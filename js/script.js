@@ -68,6 +68,16 @@
       description:
         "Read the Mediqora privacy policy, terms and conditions, cookie policy and data protection information.",
     },
+    "terms.html": {
+      title: "Terms & Conditions | Mediqora",
+      description:
+        "Read the Terms and Conditions for using Mediqora clinic management software and related services.",
+    },
+    "cookie-policy.html": {
+      title: "Cookie Policy | Mediqora",
+      description:
+        "Learn how Mediqora uses cookies and similar technologies across its website and services.",
+    },
   }[page] || {};
 
   const globalStyles = document.createElement("link");
@@ -258,8 +268,8 @@
     <div class="footer-col">
       <h4>Legal &amp; Security</h4>
       <a href="policypage.html">Privacy Policy</a>
-      <a href="policypage.html#terms">Terms &amp; Conditions</a>
-      <a href="policypage.html#cookies">Cookie Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
       <a href="policypage.html#security">Security</a>
       <a href="policypage.html#data">Data Protection</a>
     </div>
@@ -286,9 +296,9 @@
       <div class="footer-legal-links">
         <a href="policypage.html">Privacy Policy</a>
         <span class="divider">|</span>
-        <a href="policypage.html#terms">Terms &amp; Conditions</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
         <span class="divider">|</span>
-        <a href="policypage.html#cookies">Cookie Policy</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
       </div>
       <span class="tagline">Mediqora — Clinic Management Software for Modern Healthcare</span>
     </div>
@@ -299,6 +309,13 @@
   const footerMount = document.querySelector("[data-footer]");
   if (headerMount) headerMount.outerHTML = header;
   if (footerMount) footerMount.outerHTML = footer;
+
+  document.querySelectorAll('a[href="#terms"], a[href="policypage.html#terms"]').forEach((link) => {
+    link.href = "terms.html";
+  });
+  document.querySelectorAll('a[href="#cookies"], a[href="policypage.html#cookies"]').forEach((link) => {
+    link.href = "cookie-policy.html";
+  });
 
   document
     .getElementById("year")
@@ -494,15 +511,44 @@
   contactForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!contactForm.reportValidity()) return;
-    document.getElementById("contactSuccess")?.classList.add("show");
+    const success = document.getElementById("contactSuccess");
+    if (success) {
+      success.textContent = "Thanks! Our team will get back to you shortly.";
+      success.classList.add("show");
+    }
+    document.getElementById("contactError")?.classList.remove("show");
     contactForm.reset();
+    success?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
+
+  const businessStatus = document.getElementById("businessStatus");
+  if (businessStatus) {
+    const now = new Date();
+    const istTime = new Intl.DateTimeFormat("en-IN", {
+      timeZone: "Asia/Kolkata",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      weekday: "short",
+    }).formatToParts(now);
+    const parts = Object.fromEntries(istTime.map((part) => [part.type, part.value]));
+    const minutes = Number(parts.hour) * 60 + Number(parts.minute);
+    const isOpen = parts.weekday !== "Sun" && minutes >= 540 && minutes < 1080;
+    businessStatus.textContent = isOpen ? "Open now" : "Closed now";
+    businessStatus.classList.add(isOpen ? "is-open" : "is-closed");
+  }
 
   document.querySelectorAll(".faq-mini button").forEach((button) => {
     button.addEventListener("click", () => {
       const wasOpen = button.classList.toggle("open");
       const indicator = button.querySelector("b");
       if (indicator) indicator.textContent = wasOpen ? "−" : "+";
+      const answer = document.getElementById(button.getAttribute("aria-controls"));
+      if (answer) {
+        answer.hidden = !wasOpen;
+        answer.classList.toggle("open", wasOpen);
+      }
+      button.setAttribute("aria-expanded", String(wasOpen));
     });
   });
 
@@ -532,6 +578,32 @@
       });
     });
   }
+
+  const videoUpload = document.getElementById("videoUpload");
+  const videoGrid = document.getElementById("videoGrid");
+  videoUpload?.addEventListener("change", () => {
+    [...(videoUpload.files || [])].forEach((file) => {
+      const video = document.createElement("video");
+      video.controls = true;
+      video.preload = "metadata";
+      video.src = URL.createObjectURL(file);
+
+      const article = document.createElement("article");
+      article.className = "uploaded-video searchable";
+      article.dataset.keywords = file.name;
+      article.append(video);
+
+      const title = document.createElement("b");
+      title.textContent = file.name.replace(/\.[^/.]+$/, "");
+      article.append(title);
+
+      const description = document.createElement("p");
+      description.textContent = "Uploaded video tutorial.";
+      article.append(description);
+      videoGrid?.append(article);
+    });
+    videoUpload.value = "";
+  });
 
   // ---------- FAQ accordion / filter ----------
   const faqItems = [...document.querySelectorAll(".faq-item")];

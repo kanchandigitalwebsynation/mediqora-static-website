@@ -1986,3 +1986,141 @@ button {
     padding: 4px 3px;
   }
 }
+
+/* Final policy page layout and responsive styling */
+body {
+  color: var(--ink);
+  background: #ffffff;
+}
+
+h1,
+h2 {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.lead {
+  color: #596663;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.75;
+}
+
+.teal {
+  color: var(--teal-dark);
+}
+
+.policy-hero {
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 36px;
+  padding: 28px 0 18px;
+}
+
+.policy-hero h1 {
+  margin-bottom: 16px;
+}
+
+.policy-sub {
+  font-size: 24px;
+  color: var(--teal-dark);
+}
+
+.policy-layout {
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 34px;
+}
+
+.policy-content h2 {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.policy-content p,
+.policy-content li,
+.policy-side p,
+.policy-side dd {
+  color: var(--muted);
+}
+
+.policy-side {
+  position: sticky;
+  top: 96px;
+}
+
+.privacy-help h2 {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+@media (max-width: 900px) {
+  .policy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-side {
+    position: static;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: min(calc(100% - 28px), var(--max));
+  }
+
+  .policy-hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 36px 0 28px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  h2 {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .lead {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .policy-values {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .policy-content section {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-side {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-help {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .privacy-help .btn {
+    width: 100%;
+  }
+}

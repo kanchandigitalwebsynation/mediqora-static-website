@@ -620,6 +620,103 @@ html[data-theme="dark"] .footer-bottom {
     height: 38px;
   }
 
+
+/* Shared mobile safeguards for every page */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: min(calc(100% - 28px), var(--max, 1600px));
+    max-width: 100%;
+  }
+
+  .hero-split,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .form-grid,
+  .catalog-grid,
+  .role-grid,
+  .role-cards-grid,
+  .workflow-grid,
+  .contact-benefits,
+  .policy-values,
+  .demo-steps,
+  .support-grid,
+  .feature-grid,
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-split {
+    gap: 24px;
+  }
+
+  .hero-copy,
+  .hero-copy h1,
+  .hero-copy .lead {
+    max-width: 100%;
+  }
+
+  .card,
+  .soft-card,
+  .band,
+  .stats-strip,
+  .contact-shell,
+  .demo-form-shell {
+    max-width: 100%;
+  }
+
+  .table-wrap,
+  .comparison-table,
+  .map-placeholder {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  input,
+  select,
+  textarea,
+  button,
+  .btn {
+    max-width: 100%;
+  }
+
+  .cta-inner,
+  .privacy-help {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cta-inner .btn,
+  .privacy-help .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: min(calc(100% - 20px), var(--max, 1600px));
+  }
+
+  .section,
+  .section-sm {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+}
   .footer-main {
     gap: 24px 16px;
   }
@@ -705,6 +802,14 @@ html[data-theme="dark"] .footer-bottom {
     flex-direction: column;
   }
 
+  .docs-hero > :not(.hero-copy) {
+    order: 1;
+  }
+
+  .docs-hero > .hero-copy {
+    order: 0;
+  }
+
   .hero-split > :not(.hero-copy) {
     order: -1;
     width: 100%;
@@ -713,5 +818,29 @@ html[data-theme="dark"] .footer-bottom {
   .hero-split > .hero-copy {
     order: 1;
     width: 100%;
+  }
+
+  .hero-split.docs-hero > :not(.hero-copy) {
+    order: 1;
+  }
+
+  .hero-split.docs-hero > .hero-copy {
+    order: 0;
+  }
+
+  .hero-split.contact-hero > :not(.hero-copy) {
+    order: 1;
+  }
+
+  .hero-split.contact-hero > .hero-copy {
+    order: 0;
+  }
+
+  .hero-split.demo-hero > :not(.hero-copy) {
+    order: 1;
+  }
+
+  .hero-split.demo-hero > .hero-copy {
+    order: 0;
   }
 }
