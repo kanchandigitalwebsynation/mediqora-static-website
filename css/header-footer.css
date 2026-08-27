@@ -620,8 +620,6 @@ html[data-theme="dark"] .footer-bottom {
     height: 38px;
   }
 
-
-/* Shared mobile safeguards for every page */
 html,
 body {
   max-width: 100%;

@@ -1,5 +1,4 @@
 :root {
-  /* Mediqora reference palette sampled from the supplied design */
   --navy: #161a18;
   --navy-2: #263330;
   --teal: #026c68;
@@ -533,8 +532,6 @@ h3 {
   background: #fff;
   font-size: 22px;
 }
-
-/* Footer */
 .site-footer {
   margin-top: 72px;
   border-top: 1px solid var(--line);
@@ -579,8 +576,6 @@ h3 {
   gap: 16px;
   flex-wrap: wrap;
 }
-
-/* Dashboard mockup */
 .mockup-wrap {
   position: relative;
   min-height: 430px;
@@ -1046,8 +1041,6 @@ h3 {
     width: 100%;
   }
 }
-
-/* ===== PAGE-SPECIFIC STYLES ===== */
 .home-hero {
   padding-top: 10px;
   overflow: hidden;
@@ -1421,8 +1414,6 @@ h3 {
     font-size: 41px;
   }
 }
-
-/* ===== Shared theme layer (used by the single js/script.js) ===== */
 html {
   color-scheme: light;
 }
@@ -1722,8 +1713,6 @@ html[data-theme="dark"] .faq-mini button.open {
 html[data-theme="dark"] hr {
   border-color: var(--line);
 }
-
-/* ===== MEDIQORA REFERENCE THEME — shared across every page ===== */
 body {
   color: var(--ink);
   background: #ffffff;
@@ -1875,8 +1864,6 @@ h4 {
   background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   box-shadow: 0 20px 42px rgba(5, 111, 106, 0.18);
 }
-
-/* Flat dashboard preview from the supplied reference (no black laptop frame). */
 .mockup-wrap {
   min-height: 360px;
   padding: 8px 0 18px;
@@ -1943,8 +1930,6 @@ h4 {
     background: #fff;
   }
 }
-
-/* ===== HOME PAGE — reference composition ===== */
 :root {
   --max: 1280px;
   --radius: 22px;
@@ -2131,8 +2116,6 @@ h4 {
     grid-template-columns: 1fr;
   }
 }
-
-/* Compact header logo treatment to match the reference header. */
 .site-header .brand img {
   width: 132px;
   height: 34px;
@@ -2140,47 +2123,35 @@ h4 {
   object-position: center 34%;
   mix-blend-mode: multiply;
 }
-
-/* Container Layout */
 .why-mediqora-container {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* 2 columns: Text on left, Image on right */
+  grid-template-columns: 1.2fr 1fr;
   gap: 40px;
   align-items: center;
 }
-
-/* 2x2 Grid for the Benefits */
 .grid-4.benefits {
   display: grid;
 
   gap: 24px 32px;
   margin-top: 32px;
 }
-
-/* Inline Icon + Title Alignment */
 .article-header {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 8px;
 }
-
-/* Right Side Image Styling */
 .why-mediqora-image img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
 }
-
-/* Responsive view for mobile/tablet */
 @media (max-width: 992px) {
   .why-mediqora-container {
     grid-template-columns: 1fr;
   }
 }
-
-/* Layout Wrappers */
 .testimonials-wrapper {
   display: flex;
   align-items: center;
@@ -2202,8 +2173,6 @@ h4 {
 .testimonials-content {
   flex: 1;
 }
-
-/* Header & View All Link */
 .testimonials-header {
   display: flex;
   justify-content: space-between;
@@ -2218,7 +2187,6 @@ h4 {
   font-size: 14px;
 }
 
-/* Testimonial Cards */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2248,7 +2216,6 @@ h4 {
   flex: 1;
 }
 
-/* Author Info Alignment */
 .author-info {
   display: flex;
   align-items: center;
@@ -2274,7 +2241,6 @@ h4 {
   font-size: 12px;
 }
 
-/* Bottom Stats Strip */
 .stats-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2384,8 +2350,6 @@ h4 {
     align-items: flex-start;
   }
 }
-
-/* Container Box */
 .cta {
   background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
   border-radius: 16px;
@@ -2395,16 +2359,12 @@ h4 {
   position: relative;
   box-shadow: 0 10px 30px rgba(11, 102, 106, 0.15);
 }
-
-/* Horizontal 3-Column Layout */
 .cta-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 }
-
-/* Heading Styling */
 .cta-title {
   font-size: 26px;
   font-weight: 600;
@@ -2413,8 +2373,6 @@ h4 {
   color: #ffffff;
   flex: 1.2;
 }
-
-/* Paragraph Description Styling */
 .cta-description {
   font-size: 15px;
   line-height: 1.5;
@@ -2427,8 +2385,6 @@ h4 {
   font-weight: 600;
   color: #ffffff;
 }
-
-/* White Pill Button */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -2448,8 +2404,6 @@ h4 {
   background-color: #f8fafc;
   transform: translateY(-1px);
 }
-
-/* Responsive adjustments for smaller screens */
 @media (max-width: 992px) {
   .cta-inner {
     flex-direction: column;
@@ -2462,12 +2416,6 @@ h4 {
     display: none;
   }
 }
-
-
-/* =========================
-   FOOTER SOCIAL ICONS
-========================= */
-
 .site-footer .social-links {
   display: flex;
   align-items: center;
@@ -2506,9 +2454,6 @@ h4 {
 .site-footer .social-links a i {
   color: inherit;
 }
-
-/* Migrated from responsive.css */
-/* Shared responsive system: 320px through large desktop */
 :root {
   --responsive-gutter: clamp(13px, 3vw, 42px);
 }

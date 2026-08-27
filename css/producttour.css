@@ -1,5 +1,4 @@
 :root {
-  /* Mediqora reference palette sampled from the supplied design */
   --navy: #161a18;
   --navy-2: #263330;
   --teal: #026c68;
@@ -18,7 +17,7 @@
   --shadow-sm: 0 8px 24px rgba(4, 76, 75, 0.07);
   --radius: 22px;
   --radius-sm: 14px;
-  --max: 1240px;
+  --max: 1600px;
 }
 * {
   box-sizing: border-box;
@@ -74,7 +73,7 @@ button {
   cursor: pointer;
 }
 .container {
-  width: min(calc(100% - 40px), var(--max));
+  width: 1500px;
   margin: auto;
 }
 .section {
@@ -411,8 +410,6 @@ h3 {
   background: #fff0f0;
   color: #b42318;
 }
-
-/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -517,8 +514,6 @@ h3 {
   background: #fff;
   font-size: 22px;
 }
-
-/* Footer */
 .site-footer {
   margin-top: 72px;
   border-top: 1px solid var(--line);
@@ -563,8 +558,6 @@ h3 {
   gap: 16px;
   flex-wrap: wrap;
 }
-
-/* Dashboard mockup */
 .mockup-wrap {
   position: relative;
   min-height: 430px;
@@ -1030,8 +1023,6 @@ h3 {
     width: 100%;
   }
 }
-
-/* ===== PAGE-SPECIFIC STYLES ===== */
 .tour-hero {
   padding-top: 42px;
 }
@@ -1248,8 +1239,6 @@ h3 {
     padding: 12px 8px;
   }
 }
-
-/* ===== Shared theme layer (used by the single js/script.js) ===== */
 html {
   color-scheme: light;
 }
@@ -1549,35 +1538,54 @@ html[data-theme="dark"] .faq-mini button.open {
 html[data-theme="dark"] hr {
   border-color: var(--line);
 }
-
-/* ===== MEDIQORA REFERENCE THEME — shared across every page ===== */
 body {
   color: var(--ink);
   background: #ffffff;
 }
 body::before {
   background:
-    radial-gradient(circle at 9% 6%, rgba(208, 240, 247, .48), transparent 25%),
-    radial-gradient(circle at 88% 12%, rgba(231, 246, 248, .58), transparent 22%),
+    radial-gradient(
+      circle at 9% 6%,
+      rgba(208, 240, 247, 0.48),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(231, 246, 248, 0.58),
+      transparent 22%
+    ),
     linear-gradient(180deg, #ffffff 0%, #fbfdfe 48%, #ffffff 100%);
 }
-h1, h2 {
+h1,
+h2 {
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 500;
 }
-h3, h4 { color: var(--ink); }
-.lead { color: #596663; }
-.teal { color: var(--teal-dark); }
+h3,
+h4 {
+  color: var(--ink);
+}
+.lead {
+  color: #596663;
+}
+.teal {
+  color: var(--teal-dark);
+}
 .eyebrow {
   background: transparent;
   color: var(--teal-dark);
   padding-left: 0;
   padding-right: 0;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
 }
-.eyebrow::before { display: none; }
-.card, .band, .soft-card, .stats-strip {
+.eyebrow::before {
+  display: none;
+}
+.card,
+.band,
+.soft-card,
+.stats-strip {
   border-color: var(--line);
   box-shadow: var(--shadow-sm);
 }
@@ -1592,10 +1600,10 @@ h3, h4 { color: var(--ink); }
 }
 .btn-primary {
   background: linear-gradient(135deg, #026c68, #0e6362);
-  box-shadow: 0 10px 24px rgba(2, 108, 104, .18);
+  box-shadow: 0 10px 24px rgba(2, 108, 104, 0.18);
 }
 .btn-secondary {
-  background: rgba(255,255,255,.92);
+  background: rgba(255, 255, 255, 0.92);
   border-color: #b8d9d5;
   color: var(--teal-dark);
 }
@@ -1616,20 +1624,33 @@ h3, h4 { color: var(--ink); }
   color: #2d90ad;
 }
 .site-header {
-  background: rgba(255,255,255,.92);
-  border-bottom-color: rgba(227,236,234,.75);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: rgba(227, 236, 234, 0.75);
 }
-.header-inner { height: 72px; }
-.nav { gap: 22px; }
-.nav a, .nav button { color: #252c2a; font-size: 13px; }
-.nav > a::after, .nav .nav-link::after { background: var(--teal-dark); }
+.header-inner {
+  height: 72px;
+}
+.nav {
+  gap: 22px;
+}
+.nav a,
+.nav button {
+  color: #252c2a;
+  font-size: 13px;
+}
+.nav > a::after,
+.nav .nav-link::after {
+  background: var(--teal-dark);
+}
 .dropdown-menu {
   border-color: var(--line);
   box-shadow: var(--shadow);
 }
-.dropdown-menu a:hover { background: var(--teal-soft); }
+.dropdown-menu a:hover {
+  background: var(--teal-soft);
+}
 .theme-toggle {
-  background: rgba(255,255,255,.9);
+  background: rgba(255, 255, 255, 0.9);
   border-color: var(--line);
   color: var(--ink);
 }
@@ -1637,24 +1658,37 @@ h3, h4 { color: var(--ink); }
   background: #fbfdfd;
   border-top-color: var(--line);
 }
-.footer-col a, .footer-brand p, .footer-bottom { color: var(--muted); }
-.footer-col a:hover { color: var(--teal-dark); }
-.check-list li { color: #53625f; }
-.check-list li::before { border-color: var(--teal); color: var(--teal-dark); }
-.input, .select, .textarea {
-  border-color: #d8e4e2;
-  background: rgba(255,255,255,.96);
+.footer-col a,
+.footer-brand p,
+.footer-bottom {
+  color: var(--muted);
 }
-.input:focus, .select:focus, .textarea:focus {
+.footer-col a:hover {
+  color: var(--teal-dark);
+}
+.check-list li {
+  color: #53625f;
+}
+.check-list li::before {
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(2,108,104,.08);
+  color: var(--teal-dark);
+}
+.input,
+.select,
+.textarea {
+  border-color: #d8e4e2;
+  background: rgba(255, 255, 255, 0.96);
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(2, 108, 104, 0.08);
 }
 .cta {
   background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
-  box-shadow: 0 20px 42px rgba(5, 111, 106, .18);
+  box-shadow: 0 20px 42px rgba(5, 111, 106, 0.18);
 }
-
-/* Flat dashboard preview from the supplied reference (no black laptop frame). */
 .mockup-wrap {
   min-height: 360px;
   padding: 8px 0 18px;
@@ -1665,7 +1699,11 @@ h3, h4 { color: var(--ink); }
   border-radius: 48% 52% 42% 58%;
   right: -2%;
   top: 16px;
-  background: linear-gradient(135deg, rgba(219,244,248,.7), rgba(239,248,252,.34));
+  background: linear-gradient(
+    135deg,
+    rgba(219, 244, 248, 0.7),
+    rgba(239, 248, 252, 0.34)
+  );
 }
 .laptop {
   width: min(100%, 760px);
@@ -1675,32 +1713,48 @@ h3, h4 { color: var(--ink); }
   box-shadow: none;
   padding: 0;
 }
-.laptop::after { display: none; }
+.laptop::after {
+  display: none;
+}
 .screen {
   background: #fff;
   border-radius: 18px;
   min-height: 340px;
   border: 1px solid var(--line);
-  box-shadow: 0 18px 50px rgba(4,76,75,.12);
+  box-shadow: 0 18px 50px rgba(4, 76, 75, 0.12);
   padding: 16px;
 }
-.phone { display: none; }
-.dash-logo { color: var(--teal-dark); }
+.phone {
+  display: none;
+}
+.dash-logo {
+  color: var(--teal-dark);
+}
 .dash-side span:first-child {
   background: #eaf7f5;
   color: var(--teal-dark);
 }
-.metric strong { color: var(--ink); }
-.quick span { background: #f2f8fa; color: #355d62; }
-.status { background: #eaf7f2; color: #287355; }
-.pending-status { background: #fff4e8 !important; color: #b96d24 !important; }
-
-@media (max-width: 980px) {
-  .nav { background: #fff; }
+.metric strong {
+  color: var(--ink);
+}
+.quick span {
+  background: #f2f8fa;
+  color: #355d62;
+}
+.status {
+  background: #eaf7f2;
+  color: #287355;
+}
+.pending-status {
+  background: #fff4e8 !important;
+  color: #b96d24 !important;
 }
 
-
-/* Compact header logo treatment to match the reference header. */
+@media (max-width: 980px) {
+  .nav {
+    background: #fff;
+  }
+}
 .site-header .brand img {
   width: 132px;
   height: 34px;
@@ -1708,9 +1762,6 @@ h3, h4 { color: var(--ink); }
   object-position: center 34%;
   mix-blend-mode: multiply;
 }
-
-/* Migrated from responsive.css */
-/* Shared responsive system: 320px through large desktop */
 :root {
   --responsive-gutter: clamp(13px, 3vw, 42px);
 }
@@ -1740,9 +1791,21 @@ button {
   max-width: 100%;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .container {
-    width: min(calc(100% - 84px), var(--max));
+    width: calc(100% - 80px);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+  .container {
+    width: calc(100% - 64px);
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2018,5 +2081,170 @@ button {
   .dash-side span {
     font-size: 5px;
     padding: 4px 3px;
+  }
+}
+@media (min-width: 1500px) {
+  .tour-hero {
+    padding-top: 58px;
+  }
+
+  .tour-hero .lead {
+    max-width: 760px;
+    font-size: 21px;
+    line-height: 1.72;
+  }
+
+  .compact-title {
+    font-size: 32px;
+  }
+
+  .three-steps article {
+    grid-template-columns: 40px 56px minmax(0, 1fr);
+    gap: 16px;
+    padding: 18px 28px;
+  }
+
+  .three-steps article:not(:last-child)::after {
+    right: -9px;
+    font-size: 28px;
+  }
+
+  .three-steps b {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .three-steps h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .three-steps p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .tour-types .card {
+    padding: 28px;
+    min-height: 100%;
+  }
+
+  .tour-types h3 {
+    font-size: 18px;
+    margin: 15px 0 7px;
+  }
+
+  .tour-types p {
+    font-size: 13px;
+    line-height: 1.65;
+    min-height: 70px;
+  }
+
+  .tour-types button {
+    font-size: 13px;
+  }
+
+  .tour-list {
+    gap: 14px;
+  }
+
+  .tour-list article {
+    gap: 18px;
+  }
+
+  .tour-list .icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tour-list h3 {
+    font-size: 16px;
+  }
+
+  .tour-list p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .video-demo {
+    border-radius: 22px;
+  }
+
+  .video-demo .mockup-wrap {
+    min-height: 420px;
+    transform: scale(0.9);
+    margin: -22px;
+  }
+
+  .video-demo .laptop {
+    width: min(100%, 900px);
+  }
+
+  .video-demo .screen {
+    min-height: 390px;
+    padding: 20px;
+  }
+
+  .play {
+    width: 82px;
+    height: 82px;
+    font-size: 30px;
+    box-shadow: 0 0 0 12px rgba(0, 167, 157, 0.13);
+  }
+
+  .testimonial-band {
+    grid-template-columns: 2.2fr repeat(3, 0.75fr);
+  }
+
+  .testimonial-band > div {
+    padding: 24px 26px;
+  }
+
+  .quote-mark {
+    font-size: 48px;
+  }
+
+  .testimonial-band p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .testimonial-band strong {
+    font-size: 30px;
+  }
+
+  .testimonial-band span,
+  .testimonial-band small {
+    font-size: 12px;
+  }
+
+  .tour-modal {
+    padding: 32px;
+  }
+
+  .tour-modal-card {
+    width: min(760px, 92vw);
+    border-radius: 26px;
+    padding: 44px;
+  }
+
+  .tour-modal-card > button {
+    right: 22px;
+    top: 16px;
+    font-size: 36px;
+  }
+
+  .mock-video {
+    height: 340px;
+    border-radius: 20px;
+    margin-top: 24px;
+  }
+
+  .pulse {
+    width: 96px;
+    height: 96px;
+    font-size: 34px;
+    box-shadow: 0 0 0 22px rgba(0, 167, 157, 0.12);
   }
 }

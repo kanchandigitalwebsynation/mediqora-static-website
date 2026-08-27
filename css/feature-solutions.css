@@ -412,7 +412,6 @@ h3 {
   color: #b42318;
 }
 
-/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -518,19 +517,10 @@ h3 {
   font-size: 22px;
 }
 
-/* =========================================================
-   SOLUTIONS FOR EVERY ROLE
-========================================================= */
-
 .role-solutions {
   padding: 21px 0 74px;
   background: #ffffff;
 }
-
-
-/* =========================
-   Heading
-========================= */
 
 .role-solutions .role-heading {
   text-align: center;
@@ -579,22 +569,12 @@ h3 {
   color: var(--muted);
 }
 
-
-/* =========================
-   Grid
-========================= */
-
 .role-cards-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 
   gap: 18px;
 }
-
-
-/* =========================
-   Card
-========================= */
 
 .role-card {
   position: relative;
@@ -624,9 +604,6 @@ h3 {
   box-shadow:
     0 16px 35px rgba(20, 65, 70, 0.09);
 }
-
-
-/* Different card backgrounds */
 
 .role-card-doctor {
   background: linear-gradient(
@@ -660,11 +637,6 @@ h3 {
   );
 }
 
-
-/* =========================
-   Card main area
-========================= */
-
 .role-card-body {
   position: relative;
 
@@ -675,11 +647,6 @@ h3 {
 
   min-height: 0;
 }
-
-
-/* =========================
-   Person Image
-========================= */
 
 .role-person {
   position: relative;
@@ -709,11 +676,6 @@ h3 {
   transform: scale(1.025);
 }
 
-
-/* =========================
-   Content
-========================= */
-
 .role-info {
   position: relative;
   z-index: 2;
@@ -732,11 +694,6 @@ h3 {
   font-weight: 800;
   line-height: 1.2;
 }
-
-
-/* =========================
-   Feature List
-========================= */
 
 .role-info ul {
   list-style: none;
@@ -762,9 +719,6 @@ h3 {
 
   white-space: nowrap;
 }
-
-
-/* Circle Check Icon */
 
 .role-info li::before {
   content: "✓";
@@ -792,26 +746,15 @@ h3 {
   line-height: 1;
 }
 
-
-/* Staff card check color */
-
 .role-card-staff .role-info li::before {
   color: #3977df;
   border-color: #3977df;
 }
 
-
-/* Lab card check color */
-
 .role-card-lab .role-info li::before {
   color: #7264c8;
   border-color: #7264c8;
 }
-
-
-/* =========================
-   Learn More Bottom
-========================= */
 
 .role-learn-more {
   height: 58px;
@@ -855,10 +798,6 @@ h3 {
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 1100px) {
 
   .role-cards-grid {
@@ -881,11 +820,6 @@ h3 {
     font-size: 12px;
   }
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 680px) {
 
@@ -941,19 +875,10 @@ h3 {
   }
 }
 
-/* =========================================================
-   INTEGRATIONS SECTION
-========================================================= */
-
 .integration-section {
   padding: 35px 0 32px;
   background: #ffffff;
 }
-
-
-/* =========================
-   Heading
-========================= */
 
 .integration-heading {
   text-align: center;
@@ -999,11 +924,6 @@ h3 {
   font-size: 14px;
 }
 
-
-/* =========================
-   Grid
-========================= */
-
 .integration-grid {
   display: grid;
 
@@ -1012,11 +932,6 @@ h3 {
 
   gap: 8px;
 }
-
-
-/* =========================
-   Integration Card
-========================= */
 
 .integration-card {
   min-width: 0;
@@ -1053,9 +968,6 @@ h3 {
     0 12px 28px rgba(21, 70, 85, 0.08);
 }
 
-
-/* Logo */
-
 .integration-card img {
   width: 34px;
   height: 34px;
@@ -1066,8 +978,6 @@ h3 {
 }
 
 
-/* Brand name */
-
 .integration-card > span {
   color: #1a2942;
 
@@ -1076,11 +986,6 @@ h3 {
 
   white-space: nowrap;
 }
-
-
-/* =========================
-   Individual Logos
-========================= */
 
 .integration-google img {
   width: 35px;
@@ -1099,11 +1004,6 @@ h3 {
   font-style: italic;
   font-weight: 800;
 }
-
-
-/* =========================
-   More Coming Soon
-========================= */
 
 .integration-more {
   gap: 14px;
@@ -1159,10 +1059,6 @@ h3 {
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
-
 @media (max-width: 1100px) {
 
   .integration-grid {
@@ -1176,11 +1072,6 @@ h3 {
     height: 100px;
   }
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 680px) {
 
@@ -1237,11 +1128,6 @@ h3 {
   }
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 420px) {
 
   .integration-grid {
@@ -1255,7 +1141,6 @@ h3 {
   }
 }
 
-/* Footer */
 .site-footer {
   margin-top: 22px;
   border-top: 1px solid var(--line);
@@ -1301,7 +1186,6 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* Dashboard mockup */
 .mockup-wrap {
   position: relative;
   min-height: 430px;
@@ -1767,8 +1651,6 @@ h3 {
     width: 100%;
   }
 }
-
-/* ===== PAGE-SPECIFIC STYLES ===== */
 .feature-hero {
   padding-top: 48px;
 }
@@ -1896,7 +1778,6 @@ h3 {
   }
 }
 
-/* ===== Shared theme layer (used by the single js/script.js) ===== */
 html {
   color-scheme: light;
 }
@@ -2196,8 +2077,6 @@ html[data-theme="dark"] .faq-mini button.open {
 html[data-theme="dark"] hr {
   border-color: var(--line);
 }
-
-/* ===== MEDIQORA REFERENCE THEME — shared across every page ===== */
 body {
   color: var(--ink);
   background: #ffffff;
@@ -2350,7 +2229,6 @@ h4 {
   box-shadow: 0 20px 42px rgba(5, 111, 106, 0.18);
 }
 
-/* Flat dashboard preview from the supplied reference (no black laptop frame). */
 .mockup-wrap {
   min-height: 360px;
   padding: 8px 0 18px;
@@ -2418,7 +2296,6 @@ h4 {
   }
 }
 
-/* Compact header logo treatment to match the reference header. */
 .site-header .brand img {
   width: 132px;
   height: 34px;
@@ -2466,8 +2343,6 @@ h4 {
   color: inherit;
 }
 
-/* Migrated from responsive.css */
-/* Shared responsive system: 320px through large desktop */
 :root {
   --responsive-gutter: clamp(13px, 3vw, 42px);
 }

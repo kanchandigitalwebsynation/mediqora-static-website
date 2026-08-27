@@ -139,14 +139,12 @@
   });
   document.head.appendChild(structuredData);
 
-  // global favicon
   const favicon = document.createElement("link");
   favicon.rel = "icon";
   favicon.type = "image/x-icon";
   favicon.href = "assets/logo.png";
   document.head.appendChild(favicon);
 
-  // The shared footer uses Font Awesome social icons on every page.
   if (!document.querySelector('link[href*="font-awesome"]')) {
     const icons = document.createElement("link");
     icons.rel = "stylesheet";
@@ -155,7 +153,6 @@
     document.head.appendChild(icons);
   }
 
-  // ---------- Theme ----------
   const getPreferredTheme = () => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -224,8 +221,9 @@
     <!-- Brand Info -->
     <div class="footer-brand">
       <div class="brand-logo">
-        <img src="assets/logo.png" alt="Mediqora">
-       
+        <a href="home.html" aria-label="Mediqora home">
+          <img src="assets/logo.png" alt="Mediqora">
+        </a>
       </div>
       <p>The all-in-one clinic management software for modern clinics and doctors. Built to simplify your work, so you can focus on what matters most — your patients.</p>
       <div class="social-links">

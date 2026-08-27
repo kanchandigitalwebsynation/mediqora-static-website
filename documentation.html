@@ -1,181 +1,300 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Documentation — Mediqora</title>
-    <link rel="stylesheet" href="css/documentation.css">
+    <link rel="stylesheet" href="css/documentation.css" />
     <script defer src="js/script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div data-header></div>
     <main>
-        <section class="container hero-split docs-hero">
-            <div class="hero-copy reveal"><span class="eyebrow">Documentation</span>
-                <h1>Mediqora<br>Documentation</h1>
-                <p class="lead">Everything you need to setup, learn, and get the most out of Mediqora. Step-by-step
-                    guides, technical references, and best practices.</p>
-                <div class="doc-search"><input id="docSearch" class="input"
-                        placeholder="Search documentation..."><span>⌕</span></div>
-                <div class="popular-links"><b>Popular:</b><a href="#getting-started">Getting Started</a><a
-                        href="#developer">API Reference</a><a href="#integrations">Integrations</a><a
-                        href="faq.html">FAQs</a></div>
+      <section class="container hero-split docs-hero">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Documentation</span>
+          <h1>Mediqora<br />Documentation</h1>
+          <p class="lead">
+            Everything you need to setup, learn, and get the most out of
+            Mediqora. Step-by-step guides, technical references, and best
+            practices.
+          </p>
+          <div class="doc-search">
+            <input
+              id="docSearch"
+              class="input"
+              placeholder="Search documentation..."
+            /><span>⌕</span>
+          </div>
+          <div class="popular-links">
+            <b>Popular:</b><a href="#getting-started">Getting Started</a
+            ><a href="#developer">API Reference</a
+            ><a href="#integrations">Integrations</a><a href="faq.html">FAQs</a>
+          </div>
+        </div>
+        <div class="reveal" data-dashboard-mockup></div>
+      </section>
+      <section class="container section-sm reveal">
+        <div class="band feature-row">
+          <div>
+            <span class="icon">▤</span>
+            <p>
+              <strong>Step-by-Step Guides</strong
+              ><small>Detailed instructions for every feature.</small>
+            </p>
+          </div>
+          <div>
+            <span class="icon">♙</span>
+            <p>
+              <strong>Developer Resources</strong
+              ><small>APIs, SDKs, and technical references.</small>
+            </p>
+          </div>
+          <div>
+            <span class="icon">◇</span>
+            <p>
+              <strong>Best Practices</strong
+              ><small>Recommendations for better workflows.</small>
+            </p>
+          </div>
+          <div>
+            <span class="icon">▶</span>
+            <p>
+              <strong>Video Tutorials</strong
+              ><small>Watch and learn with visual walkthroughs.</small>
+            </p>
+          </div>
+          <div>
+            <span class="icon">♧</span>
+            <p>
+              <strong>Troubleshooting</strong
+              ><small>Solutions to common issues.</small>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="container section docs-layout">
+        <aside class="docs-sidebar reveal">
+          <h3>Documentation</h3>
+          <div class="side-group">
+            <b>Getting Started</b
+            ><a class="active" href="#getting-started">⌂ Introduction</a
+            ><a href="#system">System Requirements</a
+            ><a href="#quick">Quick Start Guide</a
+            ><a href="#roles">User Roles & Permissions</a>
+          </div>
+          <div class="side-group">
+            <b>User Guides</b><a href="#appointments">▦ Appointments</a
+            ><a href="#patients">♙ Patient Management</a
+            ><a href="#prescriptions">℞ Prescriptions</a
+            ><a href="#billing">₹ Billing & Payments</a
+            ><a href="#reports">▥ Reports & Analytics</a
+            ><a href="#labs">⚗ Labs & Diagnostics</a
+            ><a href="#notifications">◉ Notifications</a>
+          </div>
+          <div class="side-group">
+            <b>Administration</b><a href="#settings">⚙ Clinic Settings</a
+            ><a href="#staff">♙ Users & Staff</a
+            ><a href="#data">▤ Data Management</a
+            ><a href="#security">◈ Security & Compliance</a>
+          </div>
+          <div class="side-group" id="developer">
+            <b>Developer</b><a href="#api">↔ API Overview</a
+            ><a href="#auth">⌁ Authentication</a
+            ><a href="#reference">▧ API Reference</a
+            ><a href="#webhooks">♧ Webhooks</a
+            ><a href="#sdk">▣ SDKs & Libraries</a>
+          </div>
+          <div class="sidebar-cta">
+            <b>New to Mediqora?</b>
+            <p>
+              Start with our Quick Start Guide and get up and running in
+              minutes.
+            </p>
+            <a href="#quick">Start Now →</a>
+          </div>
+        </aside>
+        <div class="docs-main reveal" id="getting-started">
+          <h2>Getting Started</h2>
+          <p>
+            New to Mediqora? Follow these guides to get up and running quickly.
+          </p>
+          <div class="grid-4 start-cards">
+            <article
+              class="card searchable"
+              data-keywords="account signup create"
+            >
+              <span class="icon">♙</span>
+              <h3>1. Create Your Account</h3>
+              <p>Sign up and set up your clinic or hospital on Mediqora.</p>
+              <a href="#">Learn more →</a>
+            </article>
+            <article
+              class="card searchable"
+              data-keywords="settings configure clinic"
+            >
+              <span class="icon">⚙</span>
+              <h3>2. Configure Settings</h3>
+              <p>
+                Configure your clinic details, working hours and preferences.
+              </p>
+              <a href="#">Learn more →</a>
+            </article>
+            <article class="card searchable" data-keywords="team staff roles">
+              <span class="icon">♙</span>
+              <h3>3. Add Your Team</h3>
+              <p>Invite your staff and set their roles and permissions.</p>
+              <a href="#">Learn more →</a>
+            </article>
+            <article
+              class="card searchable"
+              data-keywords="patients appointments start"
+            >
+              <span class="icon">⌁</span>
+              <h3>4. Start Using Mediqora</h3>
+              <p>Add patients, schedule appointments and more.</p>
+              <a href="#">Learn more →</a>
+            </article>
+          </div>
+          <div class="guide-title">
+            <h3>Popular Guides</h3>
+            <a href="#">View all guides →</a>
+          </div>
+          <div class="guide-list">
+            <article class="searchable" data-keywords="schedule appointment">
+              <span class="icon">▦</span>
+              <div>
+                <b>How to Schedule an Appointment</b>
+                <p>Learn how to create, reschedule and manage appointments.</p>
+              </div>
+              <small>5 min read</small>
+            </article>
+            <article class="searchable" data-keywords="patient manage patients">
+              <span class="icon">♙</span>
+              <div>
+                <b>Managing Patients</b>
+                <p>Add, view, edit and organize patient records.</p>
+              </div>
+              <small>7 min read</small>
+            </article>
+            <article
+              class="searchable"
+              data-keywords="prescription create digital"
+            >
+              <span class="icon">℞</span>
+              <div>
+                <b>Creating Prescriptions</b>
+                <p>Create and manage digital prescriptions with ease.</p>
+              </div>
+              <small>6 min read</small>
+            </article>
+            <article
+              class="searchable"
+              data-keywords="billing payments invoices"
+            >
+              <span class="icon">₹</span>
+              <div>
+                <b>Billing and Payments</b>
+                <p>Generate invoices, manage payments and track dues.</p>
+              </div>
+              <small>8 min read</small>
+            </article>
+            <article class="searchable" data-keywords="reports analytics">
+              <span class="icon">▥</span>
+              <div>
+                <b>Reports and Analytics</b>
+                <p>Generate insightful reports to grow your practice.</p>
+              </div>
+              <small>6 min read</small>
+            </article>
+          </div>
+          <div class="guide-title">
+            <h3>Video Tutorials</h3>
+            <div class="video-actions">
+              <a href="#">View all videos →</a
+              ><label class="video-add"
+                ><i class="fa-solid fa-plus"></i> Add Video<input
+                  id="videoUpload"
+                  type="file"
+                  accept="video/*"
+                  multiple
+              /></label>
             </div>
-            <div class="reveal" data-dashboard-mockup></div>
-        </section>
-        <section class="container section-sm reveal">
-            <div class="band feature-row">
-                <div><span class="icon">▤</span>
-                    <p><strong>Step-by-Step Guides</strong><small>Detailed instructions for every feature.</small></p>
-                </div>
-                <div><span class="icon">♙</span>
-                    <p><strong>Developer Resources</strong><small>APIs, SDKs, and technical references.</small></p>
-                </div>
-                <div><span class="icon">◇</span>
-                    <p><strong>Best Practices</strong><small>Recommendations for better workflows.</small></p>
-                </div>
-                <div><span class="icon">▶</span>
-                    <p><strong>Video Tutorials</strong><small>Watch and learn with visual walkthroughs.</small></p>
-                </div>
-                <div><span class="icon">♧</span>
-                    <p><strong>Troubleshooting</strong><small>Solutions to common issues.</small></p>
-                </div>
+          </div>
+          <div class="video-grid" id="videoGrid">
+            <article>
+              <div class="thumb">▶</div>
+              <b>Mediqora Overview</b>
+              <p>Get a quick overview of the platform.</p>
+            </article>
+            <article>
+              <div class="thumb">▶</div>
+              <b>Appointment Management</b>
+              <p>Learn how to manage appointments.</p>
+            </article>
+            <article>
+              <div class="thumb">▶</div>
+              <b>Patient Management</b>
+              <p>Add, manage and organize records.</p>
+            </article>
+            <article>
+              <div class="thumb">▶</div>
+              <b>Reports & Analytics</b>
+              <p>Use reports to track performance.</p>
+            </article>
+          </div>
+          <div class="notice error" id="noResults">
+            No documentation items match your search.
+          </div>
+        </div>
+        <aside class="docs-right reveal">
+          <div class="card">
+            <h3>Need Help?</h3>
+            <p>Can’t find what you’re looking for? We’re here to help.</p>
+            <a href="contactus.html">Visit Help Center →</a
+            ><a href="contactus.html">Contact Support →</a
+            ><a href="bookdemo.html">Book a Demo →</a>
+          </div>
+          <div class="card">
+            <h3>Resources</h3>
+            <p><b>▧ Release Notes</b><span>See what’s new in Mediqora</span></p>
+            <p>
+              <b>▤ API Status</b><span>Check system status and uptime</span>
+            </p>
+            <p>
+              <b>↓ Download Center</b
+              ><span>User guides, templates and more</span>
+            </p>
+            <p>
+              <b>♙ Training Programs</b><span>Live and on-demand training</span>
+            </p>
+          </div>
+          <div class="card">
+            <h3>Popular Searches</h3>
+            <div class="tags">
+              <button>add patient</button><button>appointment</button
+              ><button>prescription</button><button>billing</button
+              ><button>reports</button><button>integrations</button
+              ><button>roles & permissions</button
+              ><button>sms notifications</button>
             </div>
-        </section>
-        <section class="container section docs-layout">
-            <aside class="docs-sidebar reveal">
-                <h3>Documentation</h3>
-                <div class="side-group"><b>Getting Started</b><a class="active" href="#getting-started">⌂
-                        Introduction</a><a href="#system">System Requirements</a><a href="#quick">Quick Start
-                        Guide</a><a href="#roles">User Roles & Permissions</a></div>
-                <div class="side-group"><b>User Guides</b><a href="#appointments">▦ Appointments</a><a
-                        href="#patients">♙ Patient Management</a><a href="#prescriptions">℞ Prescriptions</a><a
-                        href="#billing">₹ Billing & Payments</a><a href="#reports">▥ Reports & Analytics</a><a
-                        href="#labs">⚗ Labs & Diagnostics</a><a href="#notifications">◉ Notifications</a></div>
-                <div class="side-group"><b>Administration</b><a href="#settings">⚙ Clinic Settings</a><a href="#staff">♙
-                        Users & Staff</a><a href="#data">▤ Data Management</a><a href="#security">◈ Security &
-                        Compliance</a></div>
-                <div class="side-group" id="developer"><b>Developer</b><a href="#api">↔ API Overview</a><a
-                        href="#auth">⌁ Authentication</a><a href="#reference">▧ API Reference</a><a href="#webhooks">♧
-                        Webhooks</a><a href="#sdk">▣ SDKs & Libraries</a></div>
-                <div class="sidebar-cta"><b>New to Mediqora?</b>
-                    <p>Start with our Quick Start Guide and get up and running in minutes.</p><a href="#quick">Start Now
-                        →</a>
-                </div>
-            </aside>
-            <div class="docs-main reveal" id="getting-started">
-                <h2>Getting Started</h2>
-                <p>New to Mediqora? Follow these guides to get up and running quickly.</p>
-                <div class="grid-4 start-cards">
-                    <article class="card searchable" data-keywords="account signup create"><span class="icon">♙</span>
-                        <h3>1. Create Your Account</h3>
-                        <p>Sign up and set up your clinic or hospital on Mediqora.</p><a href="#">Learn more →</a>
-                    </article>
-                    <article class="card searchable" data-keywords="settings configure clinic"><span
-                            class="icon">⚙</span>
-                        <h3>2. Configure Settings</h3>
-                        <p>Configure your clinic details, working hours and preferences.</p><a href="#">Learn more →</a>
-                    </article>
-                    <article class="card searchable" data-keywords="team staff roles"><span class="icon">♙</span>
-                        <h3>3. Add Your Team</h3>
-                        <p>Invite your staff and set their roles and permissions.</p><a href="#">Learn more →</a>
-                    </article>
-                    <article class="card searchable" data-keywords="patients appointments start"><span
-                            class="icon">⌁</span>
-                        <h3>4. Start Using Mediqora</h3>
-                        <p>Add patients, schedule appointments and more.</p><a href="#">Learn more →</a>
-                    </article>
-                </div>
-                <div class="guide-title">
-                    <h3>Popular Guides</h3><a href="#">View all guides →</a>
-                </div>
-                <div class="guide-list">
-                    <article class="searchable" data-keywords="schedule appointment"><span class="icon">▦</span>
-                        <div><b>How to Schedule an Appointment</b>
-                            <p>Learn how to create, reschedule and manage appointments.</p>
-                        </div><small>5 min read</small>
-                    </article>
-                    <article class="searchable" data-keywords="patient manage patients"><span class="icon">♙</span>
-                        <div><b>Managing Patients</b>
-                            <p>Add, view, edit and organize patient records.</p>
-                        </div><small>7 min read</small>
-                    </article>
-                    <article class="searchable" data-keywords="prescription create digital"><span class="icon">℞</span>
-                        <div><b>Creating Prescriptions</b>
-                            <p>Create and manage digital prescriptions with ease.</p>
-                        </div><small>6 min read</small>
-                    </article>
-                    <article class="searchable" data-keywords="billing payments invoices"><span class="icon">₹</span>
-                        <div><b>Billing and Payments</b>
-                            <p>Generate invoices, manage payments and track dues.</p>
-                        </div><small>8 min read</small>
-                    </article>
-                    <article class="searchable" data-keywords="reports analytics"><span class="icon">▥</span>
-                        <div><b>Reports and Analytics</b>
-                            <p>Generate insightful reports to grow your practice.</p>
-                        </div><small>6 min read</small>
-                    </article>
-                </div>
-                <div class="guide-title">
-                    <h3>Video Tutorials</h3>
-                    <div class="video-actions"><a href="#">View all videos →</a><label class="video-add"><i
-                                class="fa-solid fa-plus"></i> Add Video<input id="videoUpload" type="file"
-                                accept="video/*" multiple></label></div>
-                </div>
-                <div class="video-grid" id="videoGrid">
-                    <article>
-                        <div class="thumb">▶</div><b>Mediqora Overview</b>
-                        <p>Get a quick overview of the platform.</p>
-                    </article>
-                    <article>
-                        <div class="thumb">▶</div><b>Appointment Management</b>
-                        <p>Learn how to manage appointments.</p>
-                    </article>
-                    <article>
-                        <div class="thumb">▶</div><b>Patient Management</b>
-                        <p>Add, manage and organize records.</p>
-                    </article>
-                    <article>
-                        <div class="thumb">▶</div><b>Reports & Analytics</b>
-                        <p>Use reports to track performance.</p>
-                    </article>
-                </div>
-                <div class="notice error" id="noResults">No documentation items match your search.</div>
-            </div>
-            <aside class="docs-right reveal">
-                <div class="card">
-                    <h3>Need Help?</h3>
-                    <p>Can’t find what you’re looking for? We’re here to help.</p><a href="contactus.html">Visit Help
-                        Center →</a><a href="contactus.html">Contact Support →</a><a href="bookdemo.html">Book a Demo
-                        →</a>
-                </div>
-                <div class="card">
-                    <h3>Resources</h3>
-                    <p><b>▧ Release Notes</b><span>See what’s new in Mediqora</span></p>
-                    <p><b>▤ API Status</b><span>Check system status and uptime</span></p>
-                    <p><b>↓ Download Center</b><span>User guides, templates and more</span></p>
-                    <p><b>♙ Training Programs</b><span>Live and on-demand training</span></p>
-                </div>
-                <div class="card">
-                    <h3>Popular Searches</h3>
-                    <div class="tags"><button>add
-                            patient</button><button>appointment</button><button>prescription</button><button>billing</button><button>reports</button><button>integrations</button><button>roles
-                            & permissions</button><button>sms notifications</button></div>
-                </div>
-            </aside>
-        </section>
-        <section class="container section-sm reveal">
-            <div class="soft-card docs-help">
-                <div>
-                    <h2>Still can’t find what you're looking for?</h2>
-                    <p>Our support team is ready to help you get the most out of Mediqora.</p>
-                </div><a class="btn btn-primary" href="contactus.html">Contact Support →</a>
-            </div>
-        </section>
+          </div>
+        </aside>
+      </section>
+      <section class="container section-sm reveal">
+        <div class="soft-card docs-help">
+          <div>
+            <h2>Still can’t find what you're looking for?</h2>
+            <p>
+              Our support team is ready to help you get the most out of
+              Mediqora.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="contactus.html">Contact Support →</a>
+        </div>
+      </section>
     </main>
     <div data-footer></div>
-</body>
-
+  </body>
 </html>
