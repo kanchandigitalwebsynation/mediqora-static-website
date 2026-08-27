@@ -655,7 +655,7 @@ svg {
   .support-grid,
   .feature-grid,
   .solutions-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: fr;
   }
 
   .hero-split {

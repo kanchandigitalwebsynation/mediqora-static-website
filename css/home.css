@@ -1281,7 +1281,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 18px;
-  min-height: 225px;
+  min-height: 1 00px;
   background: #fff;
   position: relative;
 }
