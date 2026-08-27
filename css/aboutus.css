@@ -412,7 +412,6 @@ h3 {
   color: #b42318;
 }
 
-/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -518,7 +517,6 @@ h3 {
   font-size: 22px;
 }
 
-/* Footer */
 .site-footer {
   margin-top: 72px;
   border-top: 1px solid var(--line);
@@ -564,7 +562,6 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* Dashboard mockup */
 .mockup-wrap {
   position: relative;
   min-height: 430px;
@@ -1108,7 +1105,6 @@ h3 {
   }
 }
 
-/* ===== PAGE-SPECIFIC STYLES ===== */
 .about-hero {
   padding-top: 48px;
 }
@@ -1792,9 +1788,7 @@ h3 {
   .timeline::before {
     display: none;
   }
-  /* .testimonial-wrap {
-    grid-template-columns: 1fr;
-  } */
+
   .values.grid-5 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1820,7 +1814,6 @@ h3 {
   }
 }
 
-/* ===== Shared theme layer (used by the single js/script.js) ===== */
 html {
   color-scheme: light;
 }
@@ -2121,7 +2114,6 @@ html[data-theme="dark"] hr {
   border-color: var(--line);
 }
 
-/* ===== MEDIQORA REFERENCE THEME — shared across every page ===== */
 body {
   color: var(--ink);
   background: #ffffff;
@@ -2274,7 +2266,6 @@ h4 {
   box-shadow: 0 20px 42px rgba(5, 111, 106, 0.18);
 }
 
-/* Flat dashboard preview from the supplied reference (no black laptop frame). */
 .mockup-wrap {
   min-height: 360px;
   padding: 8px 0 18px;
@@ -2342,7 +2333,6 @@ h4 {
   }
 }
 
-/* Compact header logo treatment to match the reference header. */
 .site-header .brand img {
   width: 132px;
   height: 34px;
@@ -2351,8 +2341,6 @@ h4 {
   mix-blend-mode: multiply;
 }
 
-/* Migrated from responsive.css */
-/* Shared responsive system: 320px through large desktop */
 :root {
   --responsive-gutter: clamp(13px, 3vw, 42px);
 }
@@ -2799,7 +2787,6 @@ button {
   }
 }
 
-
 .partners-cta-section {
   padding-top: 22px;
   padding-bottom: 54px;
@@ -3033,7 +3020,7 @@ button {
 .smart-cta {
   position: relative;
   min-height: 153px;
-  padding: 20px 30px 0;
+  padding: 20px 30px 52px;
   border-radius: 12px;
   overflow: hidden;
   background: linear-gradient(90deg, #026c68 0%, #116a7b 50%, #5fc4e0 100%);
@@ -3069,8 +3056,8 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 36px;
-  min-height: 95px;
-  padding-bottom: 19px;
+  min-height: 81px;
+  padding-bottom: 0;
 }
 
 .smart-cta-copy {
@@ -3165,14 +3152,14 @@ button {
   z-index: 3;
   width: calc(100% - 160px);
   min-height: 42px;
-  margin: 0 auto;
+  margin: -42px auto 0;
   padding: 7px 13px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   background: #ffffff;
-  border-radius: 7px 7px 0 0;
-  box-shadow: 0 -2px 12px rgba(21, 75, 112, 0.08);
+  border-radius: 7px;
+  box-shadow: 0 8px 22px rgba(21, 75, 112, 0.12);
 }
 
 .smart-benefit {
@@ -3246,12 +3233,12 @@ html[data-theme="dark"] .smart-cta-benefits {
 
   .smart-cta {
     min-height: 175px;
-    padding: 24px 40px 0;
+    padding: 24px 40px 58px;
     border-radius: 14px;
   }
 
   .smart-cta-main {
-    min-height: 112px;
+    min-height: 93px;
     gap: 50px;
   }
 
@@ -3280,6 +3267,7 @@ html[data-theme="dark"] .smart-cta-benefits {
   .smart-cta-benefits {
     width: calc(100% - 220px);
     min-height: 46px;
+    margin-top: -46px;
     padding: 8px 16px;
   }
 
@@ -3321,14 +3309,14 @@ html[data-theme="dark"] .smart-cta-benefits {
   }
 
   .smart-cta {
-    padding: 24px 22px 0;
+    padding: 24px 22px 24px;
   }
 
   .smart-cta-main {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    padding-bottom: 22px;
+    padding-bottom: 0;
   }
 
   .smart-cta-actions {
@@ -3338,8 +3326,9 @@ html[data-theme="dark"] .smart-cta-benefits {
 
   .smart-cta-benefits {
     width: 100%;
+    margin-top: 12px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    border-radius: 7px 7px 0 0;
+    border-radius: 7px;
   }
 
   .smart-benefit:nth-child(2) {
@@ -3368,7 +3357,7 @@ html[data-theme="dark"] .smart-cta-benefits {
   }
 
   .smart-cta {
-    padding: 20px 16px 0;
+    padding: 20px 16px;
     border-radius: 10px;
   }
 
@@ -3610,7 +3599,6 @@ html[data-theme="dark"] .smart-cta-benefits {
   }
 }
 
-
 main > section.container {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -3632,7 +3620,7 @@ main > section.container {
 }
 
 .about-hero h1 {
-  color:  #08275f;
+  color: #08275f;
 }
 
 .about-hero h1 .teal {
