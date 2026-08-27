@@ -5,12 +5,12 @@
   const doc = document.documentElement;
 
   const page = (
-    window.location.pathname.split("/").pop() || "home.html"
+    window.location.pathname.split("/").pop() || "index.html"
   ).toLowerCase();
 
   const seo =
     {
-      "home.html": {
+      "index.html": {
         title: "Mediqora | Modern Clinic Management Software",
         description:
           "Mediqora is secure clinic management software for appointments, patients, prescriptions, billing, medicines, tests and reports.",
@@ -300,7 +300,7 @@
 
         <a
           class="brand"
-          href="home.html"
+          href="index.html"
           aria-label="Mediqora home"
         >
           <img
@@ -316,8 +316,8 @@
         >
 
           <a
-            class="${isActive("home.html")}"
-            href="home.html"
+            class="${isActive("index.html")}"
+            href="index.html"
           >
             Home
           </a>
@@ -403,7 +403,7 @@
           <div class="brand-logo">
 
             <a
-              href="home.html"
+              href="index.html"
               aria-label="Mediqora home"
             >
 
