@@ -73,8 +73,10 @@ button {
   cursor: pointer;
 }
 .container {
-  width: 1500px;
-  margin: auto;
+  width: min(calc(100% - 28px), 1500px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 14px;
 }
 .section {
   padding: 26px 0;
