@@ -862,47 +862,6 @@ h3 {
   line-height: 1;
 }
 
-.stats-strip > div:nth-child(1)::before {
-  content: "🏥";
-  background: #edf5ff;
-}
-
-.stats-strip > div:nth-child(2)::before {
-  content: "☺";
-  background: #edf5ff;
-  color: #2f80ed;
-  font-size: 25px;
-}
-
-.stats-strip > div:nth-child(3)::before {
-  content: "▣";
-  background: #eaf9f7;
-  color: #14a99d;
-  font-size: 22px;
-}
-
-.stats-strip > div:nth-child(4)::before {
-  content: "▤";
-  background: #eaf9f7;
-  color: #14a99d;
-  font-size: 22px;
-}
-
-.stats-strip > div:nth-child(5)::before {
-  content: "♢";
-  background: #eaf9f3;
-  color: #19a979;
-  font-size: 27px;
-  font-weight: 700;
-}
-
-.stats-strip > div:nth-child(6)::before {
-  content: "◎";
-  background: #eaf9f7;
-  color: #14a99d;
-  font-size: 25px;
-  font-weight: 700;
-}
 
 .stats-strip strong {
   display: block;
@@ -1331,44 +1290,6 @@ h3 {
   font-size: 21px;
   font-weight: 700;
   box-shadow: 0 5px 15px rgba(48, 112, 153, 0.08);
-}
-
-.timeline article:nth-child(1)::before {
-  content: "♧";
-  background: #eaf8ff;
-  color: #1d9ac1;
-}
-
-.timeline article:nth-child(2)::before {
-  content: "</>";
-  background: #eef1ff;
-  color: #465ac8;
-  font-size: 15px;
-}
-
-.timeline article:nth-child(3)::before {
-  content: "♙";
-  background: #eef1ff;
-  color: #4c5ac7;
-}
-
-.timeline article:nth-child(4)::before {
-  content: "▥";
-  background: #e8f8fb;
-  color: #20a4bd;
-}
-
-.timeline article:nth-child(5)::before {
-  content: "◎";
-  background: #eaf4ff;
-  color: #2f63ac;
-}
-
-.timeline article:nth-child(6)::before {
-  content: "↗";
-  background: #fff1e9;
-  color: #f06b3d;
-  font-size: 24px;
 }
 
 .timeline b {
@@ -3814,4 +3735,38 @@ main > section.container {
     bottom: 14px;
     width: auto;
   }
+}
+.stat-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #eefafa;
+}
+
+.stat-icon i {
+  font-size: 24px;
+  color: var(--teal-dark);
+}
+.timeline-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 12px;
+
+  background: #f1f9fc;
+}
+
+.timeline-icon i {
+  font-size: 24px;
 }

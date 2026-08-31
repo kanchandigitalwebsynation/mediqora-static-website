@@ -2664,3 +2664,8 @@ button {
     padding: 4px 3px;
   }
 }
+.mini-benefits b i {
+  color: var(--teal-dark);
+  margin-right: 8px;
+  font-size: 16px;
+}
