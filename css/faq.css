@@ -1337,8 +1337,9 @@ h3 {
 
 .faq-side .card>a {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
   border-top: 1px solid var(--line);
+  color: var(--teal-dark);
   padding: 12px 4px;
   font-size: 12px;
   font-weight: 700;
