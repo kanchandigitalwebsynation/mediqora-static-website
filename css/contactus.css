@@ -1046,6 +1046,10 @@ h3 {
 .contact-benefits .icon {
   margin: auto;
 }
+.contact-benefits .icon i {
+  font-size: 18px;
+  line-height: 1;
+}
 .contact-benefits b,
 .contact-benefits small {
   display: block;
@@ -1084,8 +1088,17 @@ h3 {
   gap: 14px;
 }
 .contact-list li > span {
-  font-size: 24px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--teal);
+  font-size: 14px;
+}
+.contact-list li > span i {
+  font-size: 16px;
+  line-height: 1;
 }
 .contact-list b,
 .contact-list a {
@@ -2487,6 +2500,14 @@ main > section:nth-of-type(3) .section-title h2::after {
   aspect-ratio: 1 / 1;
   border: 0;
   font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-grid .icon i {
+  font-size: 20px;
+  line-height: 1;
 }
 
 .support-grid .icon:not(.purple):not(.blue):not(.orange) {

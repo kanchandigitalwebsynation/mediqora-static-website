@@ -275,23 +275,27 @@ h3 {
 }
 .check-list li {
   position: relative;
-  padding-left: 28px;
+  padding-left: 34px;
   color: #53625f;
+  display: flex;
+  align-items: center;
+  min-height: 22px;
 }
-.check-list li::before {
-  content: "✓";
+.check-list li i {
   position: absolute;
   left: 0;
-  top: 1px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 18px;
   height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
   border: 1px solid var(--teal);
   color: var(--teal-dark);
-  font-size: 11px;
-  font-weight: 900;
+  font-size: 10px;
+  background: rgba(2, 108, 104, 0.02);
 }
 .section-title {
   margin-bottom: 34px;
@@ -821,20 +825,21 @@ h3 {
   font-size: 13px;
   font-weight: 750;
   color: #53625f;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
-.hero-points span::before {
-  content: "✓";
-  display: grid;
-  place-items: center;
+.hero-points i {
   width: 20px;
   height: 20px;
-  border: 1px solid var(--teal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--teal);
   border-radius: 50%;
   color: var(--teal-dark);
-  font-size: 11px;
+  font-size: 10px;
+  background: rgba(2, 108, 104, 0.02);
 }
 .stats-strip {
   display: grid;

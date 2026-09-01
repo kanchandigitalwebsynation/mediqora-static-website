@@ -195,6 +195,10 @@ h3 {
   font-weight: 800;
   border: 1px solid rgba(0, 167, 157, 0.12);
 }
+.icon i {
+  font-size: 20px;
+  line-height: 1;
+}
 .icon.blue {
   background: var(--blue-soft);
   color: var(--blue);
@@ -1092,7 +1096,14 @@ h3 {
   padding: 15px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.72);
-  font-size: 42px;
+}
+.specialist .specialist-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+.specialist .specialist-icon i {
+  font-size: 22px;
 }
 .specialist p {
   margin: 0;
@@ -1127,6 +1138,10 @@ h3 {
   text-align: center;
   color: var(--muted);
   margin-top: 10px;
+}
+.secure-note i,
+.submit i {
+  margin-right: 8px;
 }
 .demo-steps {
   display: grid;
