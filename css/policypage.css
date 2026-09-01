@@ -1140,17 +1140,7 @@ h3 {
   gap: 10px;
   font-size: 11px;
 }
-.side-checks li::before {
-  content: "✓";
-  display: inline-grid;
-  place-items: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid var(--teal);
-  color: var(--teal);
-  margin-right: 7px;
-}
+
 .quick-links a {
   display: block;
   color: var(--teal-dark);
@@ -2133,7 +2123,7 @@ h2 {
 .policy-content li,
 .policy-side p,
 .policy-side dd {
-  color: var(--muted);
+  color: black;
 }
 
 .policy-side {
