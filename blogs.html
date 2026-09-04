@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Resources & Blog — Mediqora</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/blogs.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body class="blog-page">
+    <div data-header></div>
+    <main>
+      <section class="container hero-split blog-hero">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Resources & Blog</span>
+          <h1>
+            Resources to Help You<br /><span class="teal"
+              >Manage, Care & Grow</span
+            >
+          </h1>
+          <p class="lead">
+            Expert insights, tips, and guides to help clinics improve patient
+            care, streamline operations, and stay ahead in healthcare.
+          </p>
+          <div class="blog-search">
+            <input
+              id="blogSearch"
+              class="input"
+              placeholder="Search articles, guides, topics..."
+            />
+            <span class="search-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="6.5"></circle>
+                <path d="m16 16 4 4"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="blog-hero-visual reveal">
+          <img src="assets/logo.png" alt="Mediqora Healthcare Banner" />
+        </div>
+      </section>
+
+      <section class="container blog-category-section reveal">
+        <div class="category-band">
+          <button data-cat="clinic">
+            <span class="category-icon">
+              <i class="fa-solid fa-calendar-days"></i>
+            </span>
+            <b>Clinic Management</b>
+            <small>28 Articles</small>
+          </button>
+          <button data-cat="patient">
+            <span class="category-icon">
+              <i class="fa-solid fa-stethoscope"></i>
+            </span>
+            <b>Patient Care</b>
+            <small>35 Articles</small>
+          </button>
+          <button data-cat="rx">
+            <span class="category-icon">
+              <i class="fa-solid fa-prescription-bottle-medical"></i>
+            </span>
+            <b>Prescriptions<br />&amp; Medicine</b>
+            <small>22 Articles</small>
+          </button>
+          <button data-cat="lab">
+            <span class="category-icon">
+              <i class="fa-solid fa-flask-vial"></i>
+            </span>
+            <b>Lab &amp; Diagnostics</b>
+            <small>18 Articles</small>
+          </button>
+          <button data-cat="growth">
+            <span class="category-icon">
+              <i class="fa-solid fa-chart-column"></i>
+            </span>
+            <b>Growth &amp; Marketing</b>
+            <small>16 Articles</small>
+          </button>
+          <button data-cat="security">
+            <span class="category-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            <b>Technology &amp; Security</b>
+            <small>24 Articles</small>
+          </button>
+          <button data-cat="guide">
+            <span class="category-icon">
+              <i class="fa-solid fa-book-open"></i>
+            </span>
+            <b>Guides &amp; eBooks</b>
+            <small>12 Resources</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="container blog-content-section blog-layout">
+        <div class="blog-main">
+          <div class="featured reveal blog-item" data-cat="clinic patient">
+            <span class="eyebrow">Featured Article</span>
+            <div class="featured-card">
+              <img
+                class="article-image doctor-image"
+                src="assets/blog/featured-doctor.png"
+                alt="Doctor using a tablet"
+              />
+              <div class="featured-copy">
+                <h2>
+                  10 Ways Clinic Management Software Improves Patient Care and
+                  Efficiency
+                </h2>
+                <p>
+                  Discover how digital solutions like Mediqora help clinics
+                  streamline operations, reduce admin work, and focus on what
+                  matters most – patients.
+                </p>
+                <div class="featured-bottom">
+                  <div class="author">
+                    <img src="assets/blog/author.png" alt="Dr. Priya Nair" />
+                    <p>
+                      <b>Dr. Priya Nair</b>
+                      <small>Co-Founder &amp; COO</small>
+                    </p>
+                  </div>
+                  <div class="featured-date">
+                    May 20, 2024 <span>•</span> 6 min read
+                  </div>
+                </div>
+                <a class="read-more-btn" href="#">Read More <span>→</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="latest-title">
+            <h2>Latest from the Blog</h2>
+            <a href="#">View All Articles <span>→</span></a>
+          </div>
+
+          <div class="post-list reveal" id="postList">
+            <article class="blog-item" data-cat="clinic">
+              <img
+                class="article-image small-img"
+                src="assets/blog/post-1.png"
+                alt="Doctor consulting a patient"
+              />
+              <div>
+                <span class="post-tag">Clinic Management</span>
+                <h3>
+                  How to Reduce Patient No-Shows and Improve Appointment
+                  Attendance
+                </h3>
+                <p>
+                  Effective strategies to minimize no-shows and ensure better
+                  time management for your clinic.
+                </p>
+                <small>May 18, 2024 <span>•</span> 5 min read</small>
+              </div>
+              <a class="read-more-btn" href="#">Read More <span>→</span></a>
+            </article>
+            <article class="blog-item" data-cat="rx security">
+              <img
+                class="article-image small-img"
+                src="assets/blog/post-2.png"
+                alt="Doctor using a tablet"
+              />
+              <div>
+                <span class="post-tag">Technology</span>
+                <h3>The Role of Digital Prescriptions in Modern Healthcare</h3>
+                <p>
+                  Why digital prescriptions are safer, faster, and more
+                  efficient for both doctors and patients.
+                </p>
+                <small>May 15, 2024 <span>•</span> 4 min read</small>
+              </div>
+              <a class="read-more-btn" href="#">Read More <span>→</span></a>
+            </article>
+            <article class="blog-item" data-cat="growth">
+              <img
+                class="article-image small-img"
+                src="assets/blog/post-3.png"
+                alt="Doctor reviewing analytics"
+              />
+              <div>
+                <span class="post-tag">Growth &amp; Marketing</span>
+                <h3>5 Data-Driven Insights to Grow Your Clinic Successfully</h3>
+                <p>
+                  Leverage reports and analytics to make smarter decisions and
+                  grow your practice.
+                </p>
+                <small>May 12, 2024 <span>•</span> 6 min read</small>
+              </div>
+              <a class="read-more-btn" href="#">Read More <span>→</span></a>
+            </article>
+          </div>
+          <div class="notice error" id="blogEmpty">
+            No articles match your search.
+          </div>
+        </div>
+
+        <aside class="blog-side reveal">
+          <div class="soft-card popular-topics">
+            <h3>Popular Topics</h3>
+            <a href="#">Appointment Management Tips <span>›</span></a>
+            <a href="#">Reducing No-Shows <span>›</span></a>
+            <a href="#">Digital Prescriptions <span>›</span></a>
+            <a href="#">Patient Data Security <span>›</span></a>
+            <a href="#">Clinic Growth Strategies <span>›</span></a>
+            <button class="btn btn-primary">View All Topics</button>
+          </div>
+
+          <div class="card downloads">
+            <h3>Download Free Resources</h3>
+            <article>
+              <img
+                class="book"
+                src="assets/blog/book-1.png"
+                alt="Clinic management checklist cover"
+              />
+              <p>
+                <b>The Ultimate Clinic Management Checklist (PDF)</b
+                ><small>Free Download</small>
+              </p>
+              <a href="#" aria-label="Download clinic management checklist">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v12M7 10l5 5 5-5M5 20h14"></path>
+                </svg>
+              </a>
+            </article>
+            <article>
+              <img
+                class="book"
+                src="assets/blog/book-2.png"
+                alt="Digital prescriptions guide cover"
+              />
+              <p>
+                <b>Guide to Digital Prescriptions (PDF)</b
+                ><small>Free Download</small>
+              </p>
+              <a href="#" aria-label="Download digital prescriptions guide">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v12M7 10l5 5 5-5M5 20h14"></path>
+                </svg>
+              </a>
+            </article>
+            <article>
+              <img
+                class="book"
+                src="assets/blog/book-3.png"
+                alt="Clinic data security guide cover"
+              />
+              <p>
+                <b>Clinic Data Security Best Practices (PDF)</b
+                ><small>Free Download</small>
+              </p>
+              <a href="#" aria-label="Download clinic data security guide">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v12M7 10l5 5 5-5M5 20h14"></path>
+                </svg>
+              </a>
+            </article>
+          </div>
+
+          <div class="soft-card newsletter">
+            <span class="newsletter-plane" aria-hidden="true">
+              <svg viewBox="0 0 40 40">
+                <path d="M4 18 35 5 23 35l-5-12zM18 23 35 5"></path>
+              </svg>
+            </span>
+            <h3>Stay Updated</h3>
+            <p>
+              Subscribe to our newsletter and get the latest articles, tips, and
+              updates.
+            </p>
+            <form id="blogSubscribe">
+              <input
+                class="input"
+                type="email"
+                required
+                placeholder="Enter your email"
+              />
+              <button class="btn btn-primary">Subscribe</button>
+            </form>
+            <small
+              ><span class="tiny-heart">♡</span> No spam. Unsubscribe
+              anytime.</small
+            >
+            <div class="notice success" id="blogSubscribed">
+              Thanks for subscribing!
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="container blog-features-section reveal">
+        <div class="band feature-row">
+          <div>
+            <span class="icon feature-icon">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </span>
+            <p>
+              <strong>Expert Content</strong
+              ><small
+                >Articles written by healthcare professionals and industry
+                experts.</small
+              >
+            </p>
+          </div>
+          <div>
+            <span class="icon feature-icon">
+              <i class="fa-solid fa-wand-sparkles"></i>
+            </span>
+            <p>
+              <strong>Practical &amp; Actionable</strong
+              ><small
+                >Real-world tips and strategies you can implement today.</small
+              >
+            </p>
+          </div>
+          <div>
+            <span class="icon feature-icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </span>
+            <p>
+              <strong>Always Updated</strong
+              ><small
+                >Fresh content to keep you informed about the latest in
+                healthcare.</small
+              >
+            </p>
+          </div>
+          <div>
+            <span class="icon feature-icon">
+              <i class="fa-solid fa-check"></i>
+            </span>
+            <p>
+              <strong>100% Free</strong
+              ><small
+                >All resources, guides and articles are free for
+                everyone.</small
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container blog-cta-section reveal">
+        <div class="cta blog-cta">
+          <div class="cta-inner">
+            <div class="cta-copy-wrap">
+              <span class="cta-book-icon" aria-hidden="true">
+                <svg viewBox="0 0 42 42">
+                  <path
+                    d="M7 11c6-2 11-1 14 3v20c-3-4-8-5-14-3zM35 11c-6-2-11-1-14 3v20c3-4 8-5 14-3z"
+                  ></path>
+                  <path d="M11 17h6M11 21h6M25 17h6M25 21h6"></path>
+                </svg>
+              </span>
+              <div>
+                <h2>Knowledge to Empower Your Practice</h2>
+                <p>
+                  Explore our resources and discover how Mediqora can help your
+                  clinic run smarter and deliver better care.
+                </p>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="btn btn-secondary" href="pricing.html"
+                >Start Free Trial</a
+              >
+              <a class="btn btn-ghost" href="bookdemo.html">
+                <svg class="calendar-icon" viewBox="0 0 24 24">
+                  <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+                  <path d="M8 3v4M16 3v4M4 10h16"></path>
+                </svg>
+                Schedule a Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div data-footer></div>
+  </body>
+</html>
